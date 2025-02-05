@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Raylib + C# Tutorials & Code-Beispiele">
+    <meta name="description" content="Raylib C# Tutorials & Code Examples">
     <title>Raylib C# Tutorials</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/language.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -44,30 +45,50 @@
             padding: 10px;
             background-color: #25252f;
         }
+        /* Dropdown Styling */
+        .language-switcher {
+            margin-top: 10px;
+        }
+        select {
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Raylib C# Tutorials</h1>
-        <p>Alles, was du brauchst, um mit Raylib & C# zu starten</p>
+        <h1 id="title">Raylib C# Tutorials</h1>
+        <p id="subtitle">Everything you need to start with Raylib & C#</p>
+        
+        <!-- Language Selector -->
+        <div class="language-switcher">
+            <label for="language">🌍 Select Language: </label>
+            <select id="language" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="de">Deutsch</option>
+                <option value="ru">Русский</option>
+            </select>
+        </div>
     </header>
 
     <nav>
-        <a href="basics.html">Basics</a>
-        <a href="2d.html">2D</a>
-        <a href="3d.html">3D</a>
-        <a href="ui.html">UI</a>
+        <a href="basics.html" id="nav-basics">Basics</a>
+        <a href="2d.html" id="nav-2d">2D</a>
+        <a href="3d.html" id="nav-3d">3D</a>
+        <a href="ui.html" id="nav-ui">UI</a>
     </nav>
 
     <div class="content">
-        <h2>Willkommen!</h2>
-        <p>Hier findest du Tutorials, Code-Beispiele & interaktive Demos für Raylib mit C#.</p>
-        <p>Starte mit den Basics oder entdecke 2D- und 3D-Entwicklung mit Raylib!</p>
+        <h2 id="welcome">Welcome!</h2>
+        <p id="description">Here you will find tutorials, code examples & interactive demos for Raylib with C#.</p>
+        <p id="cta">Start with the basics or explore 2D and 3D development with Raylib!</p>
     </div>
 
     <footer>
-        <p>© 2024 Raylib C# Tutorials | Erstellt von Sergej Krieger</p>
+        <p>© 2024 Raylib C# Tutorials | Created by Sergej Krieger</p>
     </footer>
 
 </body>
