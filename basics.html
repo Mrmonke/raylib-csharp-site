@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Raylib C# Basics - Getting Started">
+    <title>Raylib C# Basics</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/language.js"></script>
+    <script defer src="js/os-switch.js"></script>
+    <style>
+        .os-buttons {
+            margin: 20px 0;
+        }
+        .os-buttons button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+        }
+        .os-buttons button.active {
+            background-color: #0056b3;
+        }
+        .os-content {
+            display: none;
+            padding: 15px;
+            background-color: #25252f;
+            border-radius: 5px;
+        }
+        .os-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 id="title">Raylib C# Basics</h1>
+        <p id="subtitle">Learn the fundamentals of Raylib with C#</p>
+        
+        <!-- Language Selector -->
+        <div class="language-switcher">
+            <label for="language">🌍 Select Language: </label>
+            <select id="language" onchange="changeLanguage()">
+                <option value="en">English</option>
+                <option value="de">Deutsch</option>
+                <option value="ru">Русский</option>
+            </select>
+        </div>
+    </header>
+
+    <nav>
+        <a href="index.html" id="nav-home">Home</a>
+        <a href="basics.html" id="nav-basics">Basics</a>
+        <a href="2d.html" id="nav-2d">2D</a>
+        <a href="3d.html" id="nav-3d">3D</a>
+        <a href="ui.html" id="nav-ui">UI</a>
+    </nav>
+
+    <div class="content">
+        <h2 id="basics-title">Getting Started with Raylib C#</h2>
+        <p id="basics-desc">This section covers the basics: how to set up Raylib with C#, write your first program, and understand the game loop.</p>
+
+        <!-- Betriebssystem-Umschaltung -->
+        <div class="os-buttons">
+            <button onclick="showOS('windows')" id="btn-windows" class="active">Windows</button>
+            <button onclick="showOS('mac')" id="btn-mac">Mac</button>
+            <button onclick="showOS('linux')" id="btn-linux">Linux</button>
+        </div>
+
+        <!-- Windows Installation -->
+        <div id="windows" class="os-content active">
+            <h3>Installing Raylib on Windows</h3>
+            <p>To install Raylib for C# on Windows, use the following command:</p>
+            <pre><code>dotnet add package Raylib-cs</code></pre>
+            <p>Make sure you have the .NET SDK installed. You can download it from <a href="https://dotnet.microsoft.com/download" target="_blank">here</a>.</p>
+        </div>
+
+        <!-- Mac Installation -->
+        <div id="mac" class="os-content">
+            <h3>Installing Raylib on macOS</h3>
+            <p>To install Raylib for C# on macOS, first install Homebrew and then use:</p>
+            <pre><code>brew install raylib</code></pre>
+            <p>Then add the Raylib package to your .NET project:</p>
+            <pre><code>dotnet add package Raylib-cs</code></pre>
+        </div>
+
+        <!-- Linux Installation -->
+        <div id="linux" class="os-content">
+            <h3>Installing Raylib on Linux</h3>
+            <p>On Linux, install Raylib via your package manager:</p>
+            <pre><code># Ubuntu/Debian
+sudo apt install libraylib-dev
+
+# Arch Linux
+sudo pacman -S raylib</code></pre>
+            <p>Then add the Raylib package to your .NET project:</p>
+            <pre><code>dotnet add package Raylib-cs</code></pre>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2024 Raylib C# Tutorials | Created by Sergej Krieger</p>
+    </footer>
+
+</body>
+</html>
